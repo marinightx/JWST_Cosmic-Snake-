@@ -4,7 +4,7 @@ This program is designed to filter and process specific FITS files, create JSON 
 
 # Installation
 
-No installation is required to run this program as it solely uses standard Python libraries. Just ensure you have Python (version X.X or higher) installed on your system.
+No installation is required to run this program as it solely uses standard Python libraries. Just ensure you have Python installed on your system.
 
 # Usage
 
@@ -13,6 +13,7 @@ Run the program using the following command:
 
     python program_name.py [--leakcal] argument1 argument2 
 
+program_name.py : in my case it's creation_json_step2_3.py
 argument1: Science file type specified on the command line.
 
 argument2: Sky file type specified on the command line.
