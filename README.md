@@ -8,17 +8,16 @@ No installation is required to run this program as it solely uses standard Pytho
 
 # Usage
 
-    Place the FITS files in the input directory specified by input_dir.
-    Run the program using the following command:
-
-bash
+Place the FITS files in the input directory specified by input_dir.
+Run the program using the following command:
 
     python program_name.py [--leakcal] argument1 argument2 
-    argument1: Science file type specified on the command line.
-    argument2: Sky file type specified on the command line.
-    --leakcal (optional): If this option is specified, the program will apply the leakcal file to the specified arguments.
 
-    Filtered files and JSON structures will be created in the output directory specified by output_dir.
+argument1: Science file type specified on the command line.
+argument2: Sky file type specified on the command line.
+--leakcal (optional): If this option is specified, the program will apply the leakcal file to the specified arguments.
+
+Filtered files and JSON structures will be created in the output directory specified by output_dir.
 
 # Configurable Parameters
 
