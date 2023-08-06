@@ -14,7 +14,9 @@ Run the program using the following command:
     python program_name.py [--leakcal] argument1 argument2 
 
 argument1: Science file type specified on the command line.
+
 argument2: Sky file type specified on the command line.
+
 --leakcal (optional): If this option is specified, the program will apply the leakcal file to the specified arguments.
 
 Filtered files and JSON structures will be created in the output directory specified by output_dir.
