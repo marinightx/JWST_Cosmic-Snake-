@@ -1,4 +1,4 @@
-JWST (changer le nom)
+DATA REDUCTION WITH THE JWST SCIENCE CALIBRATION PIPELINE 
 
 This program is designed to filter and process specific FITS files, create JSON structures for data association, and perform cube processing using the Spec2Pipeline and Spec3Pipeline.
 
@@ -13,8 +13,8 @@ Usage
 bash
 
     python program_name.py [--leakcal] argument1 argument2 
-    argument1: Science file type specified on the command line (e.g., ifu, sky, etc.).
-    argument2: Sky file type specified on the command line (e.g., sky, sky2, etc.).
+    argument1: Science file type specified on the command line.
+    argument2: Sky file type specified on the command line.
     --leakcal (optional): If this option is specified, the program will apply the leakcal file to the specified arguments.
 
     Filtered files and JSON structures will be created in the output directory specified by output_dir.
@@ -25,7 +25,8 @@ You can adjust the following parameters in the program:
 
     cube_build.scale1: Reduce pixel size on axis 1 for cube processing.
     cube_build.scale2: Reduce pixel size on axis 2 for cube processing.
-    Other parameters specific to the pipelines used.
+    cube_build.coord_system : as the sky is the default parameter.
+
 
 Examples
 
@@ -33,13 +34,13 @@ Examples
 
 bash
 
-python program_name.py ifu
+python creation_json_step2_3.py ifu
 
     To process IFU type files with sky files using the leakcal file:
 
 bash
 
-python program_name.py --leakcal ifu sky 
+python creation_json_step2_3.py --leakcal ifu sky 
 
 Notes
 
