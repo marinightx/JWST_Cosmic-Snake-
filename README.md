@@ -31,16 +31,19 @@ You can adjust the following parameters in the program:
 
 # Examples
 
-    To process IFU type files:
+To process IFU type files:
 
-bash
+    python creation_json_step2_3.py ifu
 
-python creation_json_step2_3.py ifu
+To process IFU type files with sky files using the leakcal file:
 
-    To process IFU type files with sky files using the leakcal file:
-
-bash
-
-python creation_json_step2_3.py --leakcal ifu sky 
+    python creation_json_step2_3.py --leakcal ifu sky 
 
 # Notes
+    Ensure all required FITS files are present in the specified input directory.
+    Created files will be saved in the specified output directory.
+    Please check the comments in the code for more details about different parts of the program.
+
+# Authors
+
+Marina Serre
