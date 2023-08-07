@@ -4,14 +4,16 @@ The objective was to study star formation in a distant galaxy using publicly ava
 In an innovative approach, data analysis tools from the MUSE instrument, used with the Very Large Telescope (VLT), were adapted and applied to the NIRSpec instrument (designed to observe celestial objects in the near-infrared and onboard the JWST) to measure and analyze the flux of prominent emission lines. 
 This approach provided accurate information on the chemical composition of the studied galaxy, as well as the physical processes taking place within it.
 
-# How ?
+## How ?
 
-# names of the programs
+## names of the programs
 
-# Authors 
+## Authors 
 
 Serre Marina 
 
 :link: : https://www.linkedin.com/in/marinaserre/
 
 :email: : marina.serre@etu.univ-lyon1.fr
+
+Thank you for taking the time to explore my project! Feel free to reach out if you have any questions or suggestions. Enjoy! :blush:
