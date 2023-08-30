@@ -18,8 +18,8 @@ nouveau_json = []
 # Retrieve command-line arguments
 args = sys.argv[1:]
 
-"""in the command line, if only one argument is specified then we take the ifu data, if a second is specified then it is of sky type and if at the very beginning "--leakcal" is specified then the leakcal is applied to the arguemnts specified
-"""
+#in the command line, if only one argument is specified then we take the ifu data, if a second is specified then it is of sky type and if at the very beginning "--leakcal" is specified then the leakcal is applied to the arguemnts specified
+
 # Check if the argument --leakcal is specified 
 if '--leakcal' in args:
     leakcal_arg_index = args.index('--leakcal')
@@ -160,53 +160,6 @@ for i, fits_file in enumerate(ifu_files_nrs1):
         # Add leakcal calibration files for sky background if specified
         if process_leakcal_files:
             for leakcal_sky_fits_file in leakcal_sky_files_nrs1:
-                association["products"][0]["members"].append({"expname": leakcal_sky_fits_file, "exptype": "imprint"})
-
-    # Define the output JSON path
-    output_json = os.path.join(output_dir, association["products"][0]["name"])
-
-    # Write the JSON structure to the output JSON file
-    with open(output_json, "w") as outfile:
-        json.dump(association, outfile, indent=4)
-        json_cree.append(output_json)
-    print("Created .json file:", output_json)
-
-# Processing files with NRS2 detector
-for i, fits_file in enumerate(ifu_files_nrs2):
-    # Get the FITS header of the current IFU file
-    header = fits.getheader(fits_file)
-    # Extract the filename without the extension
-    filename = os.path.splitext(os.path.basename(fits_file))[0]
-    # Create a JSON structure for file association
-    association = {
-        "asn_rule": "DMS_Level3_Base",
-        "asn_pool": "none",
-        "asn_type": "None",
-        "products": [
-            {
-                "name": f"{filename}.json",
-                "members": []
-            }
-        ]
-    }
-
-    # Add the current file to the members list, specifying the experiment type (science) if needed
-    if process_ifu_files:
-        association["products"][0]["members"].append({"expname": fits_file, "exptype": "science"})
-
-    # Add leakcal calibration files if specified
-    if process_leakcal_files:
-        for leakcal_fits_file in leakcal_ifu_files_nrs2:
-            association["products"][0]["members"].append({"expname": leakcal_fits_file, "exptype": "imprint"})
-
-    # Add sky background files if specified
-    if process_sky_files:
-        for sky_fits_file in sky_files_nrs2:
-            association["products"][0]["members"].append({"expname": sky_fits_file, "exptype": "background"})
-
-        # Add leakcal calibration files for sky background if specified
-        if process_leakcal_files:
-            for leakcal_sky_fits_file in leakcal_sky_files_nrs2:
                 association["products"][0]["members"].append({"expname": leakcal_sky_fits_file, "exptype": "imprint"})
 
     # Define the output JSON path
