@@ -218,11 +218,11 @@ for i, fits_file in enumerate(ifu_files_nrs2):
         json_cree.append(output_json)
     print("Created .json file:", output_json)
 
-"""
+
 for json_file in json_cree:
     spec2_pipeline = Spec2Pipeline()
     spec2_pipeline.call(json_file, save_results=True, output_dir=output_dir)
-"""
+
 """
 # Ajouter les fichiers "cal.fits" au fichier JSON
 directory = output_dir
